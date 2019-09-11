@@ -3,5 +3,7 @@ public class StockMarket{
         ReadFile r = new ReadFile();
         System.out.println(r.checkFile());
         System.out.println(r.checkRowNumber());
+        r.convertToArray();
+        r.printArray();
     }
 }

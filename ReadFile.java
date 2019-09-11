@@ -54,6 +54,21 @@ public class ReadFile{
             System.out.println(e);
         }
     }
+    //prints out Items array TO MAKE SURE
+    public void printArray(){
+        for(int x =0; x < items.length; x++){
+            System.out.printf("%s -", x);
+            for(int y=0; y<items[x].length; y++){
+                System.out.printf("%s -", items[x][y]);
+            }
+            System.out.println();
+        }
+    }
+
+    //return array items
+    public String[][] getArray(){
+        return items;
+    }
 
 
 
