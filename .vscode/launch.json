@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - StockMarket",
+            "request": "launch",
+            "mainClass": "StockMarket",
+            "projectName": "SamsungHeavy_e91c3"
+        }
+    ]
+}
