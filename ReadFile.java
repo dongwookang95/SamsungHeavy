@@ -10,6 +10,8 @@ public class ReadFile{
     public boolean checkFile(){
         return file.isFile();
     }
+
+
     //check number of rows in csv file
     public int checkRowNumber(){
         row = 0;
@@ -28,6 +30,29 @@ public class ReadFile{
             System.out.println("This is not a file");
         }
         return row;
+    }
+    //converts the csv file to an array
+    public void convertToArray(){
+        int r = 0;
+        //Since Yahoo stock market file only give 7 columns
+        items = new String[checkRowNumber()][7];
+
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            String line = null;
+
+            while((line=reader.readLine())!= null){
+                StringTokenizer z = new StringTokenizer(line, ",");
+                while(z.hasMoreTokens()){
+                    for(int c = 0 ; c<7 ; c++){
+                        items[r][c] = z.nextToken();
+                    }
+                    r++;
+                }
+            }
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 
 
